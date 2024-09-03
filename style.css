@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("pics/pic4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Controle da transparência - menor valor =  mais transparente */
+    z-index: -1; /* Garante que o overlay fique atrás do conteúdo */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.content-index {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 80vh;
+    padding: 20px; /* Espaçamento interno do contêiner */
+    box-sizing: border-box; /* Inclui o padding na largura total do contêiner */
+}
+
+.content-sobre-mim {
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.content-portfolio {
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.left, .right {
+    /*flex: 1;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    /*text-align: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Aumenta o tamanho relativo da imagem */
+}
+
+.left img {
+    max-width: 50%;
+    /*max-height: 100%;*/
+    height: auto; /* Ajusta a altura da imagem proporcionalmente */
+    object-fit: cover; /* Garante que a imagem cubra a área do contêiner sem distorção */
+    opacity: 0.8;
+}
+
+.right {
+    flex: 1; /* Reduz o tamanho relativo do texto*/
+    font-size: 18px;
+    /*text-align: center;*/
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Permite o posicionamento de elementos filhos em relação a ele */
+}
+
+.right p {
+    margin: 0 0 20px 0; /* Remove margens padrão para evitar contato com bordas */
+    text-align: left;
+    text-indent: 20px; /* Adiciona um recuo de 20 pixels no início de cada parágrafo */
+}
+
+/* Estilo para a tabela */
+.table-description {
+    font-size: 24px; /* tamanho da fonte escolhida */
+    font-weight: bold; /* bold = negrito */
+    margin-top: 40px; /* Espaço entre a frase e a tabela */
+}
+
+.centered-table {
+    width: 100%;
+    text-align: center;
+}
+.centered-table td {
+    padding: 10px; /* Espaçamento ao redor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+.content-form-educ {
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo esteja acima do background */
+}
+
+.educ-section {
+    text-align: center;
+}
+
+.main-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 40px; /* Aumenta o espaço abaixo do título */
+}
+
+.lista-dados {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+lista-dados li {
+    font-size: 18px;
+    margin: 10px 0; /* Espaço entre os itens da lista */
+}
+
+/* Estilo para o botão de contato */
+.footer {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+
+
+/* Estilo do conteúdo principal da página de contato */
+.content-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.contact-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 60px; /* Espaço abaixo do título */
+    text-align: center;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao formulário */
+}
+
+.contact-form ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+}
+
+.contact-form li {
+    margin-bottom: 18px; /* Espaço entre os itens da lista */
+}
+
+.contact-form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-for input, contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Garante que os campos preencham toda a largura disponível */
+}
+
+.contat-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Corrige o estilo para garantir consistência com outras páginas */
+.content-index, .content-sobre-mim, .content-portfolio {
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajusta a estrutura e o alinhamento dos itens da lista */
+.lista-dados li {
+    font-size: 18px;
+    margin: 10px 0;
+}
